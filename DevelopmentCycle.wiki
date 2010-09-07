@@ -1,0 +1,14 @@
+# I want to commit, what to do?
+
+= Introduction =
+
+This wiki page explains basic workflow of each commit.
+
+
+= Details =
+
+You may start with checkouting code and installing some tools (phpdoc, phpunit). Let's now assume you have completed setup and actually you can start changing code.
+
+First of all, if you are fixing some issue, you should create it in the bugtracker [http://code.google.com/p/fajr/issues/list].
+
+TODO: rest of this page
