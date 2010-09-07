@@ -1,0 +1,43 @@
+# I wanna to clean up my mess.
+
+= Introduction =
+
+Coding standard is important part of coding practice. It is something like common language for developers. If you ever tried to change some code with random naming of variables, wrong indentation and without doccomments, you know what I'm talking about.
+
+TODO: how to test for coding style violations.
+
+= Details =
+
+== Indentation ==
+  * use spaces, not tabs
+  * indent nested scope by 2 spaces
+
+== Opening brace { ==
+  * for classes, functions on next line
+  * for inline structures (if, while, switch) on the line prepended by exactly one space.
+
+Examples:
+{{{
+class Test
+{
+  function doIt()
+  {
+    if (1 == 2) {
+      assert(false);
+    }
+  }
+}
+}}}
+
+=TODO: everything else=
+
+== Documentation comments ==
+
+== Naming conventions ==
+
+=== Files & directories ===
+=== Namespaces ===
+=== @package & @subpackage ===
+=== Classes ===
+=== Variables and functions ===
+=== Constants ===
