@@ -33,10 +33,10 @@ class Test
 
 == Documentation comments ==
   * each file should contain a description of its purpose
-  * each file should contain @author, @package and @subpackage doccomments
+  * each file should contain `@author`, `@package` and `@subpackage` doccomments
   * all functions should have a description of their purpose
-  * note important variables with the @var doccomment
-  * describe functions with @return, @param etc. doccoments as necessary
+  * note important variables with the `@var` doccomment
+  * describe functions with `@return`, `@param` etc. doccoments as necessary
   * it is better to include more information than less (but be reasonable)
 
 == Naming conventions ==
@@ -45,8 +45,7 @@ class Test
 === Namespaces ===
 === @package & @subpackage ===
   * @package: Fajr
-  * @subpackage: Usually the path to the file, with __ instead of /. For example if a
-file belongs to `libfajr/base`, its subpackage should be `Libfajr__Base`.
+  * @subpackage: Usually the path to the file, with __ instead of /. For example if a file belongs to `libfajr/base`, its subpackage should be `Libfajr__Base`.
 
 === Classes ===
 === Variables and functions ===
