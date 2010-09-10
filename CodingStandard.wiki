@@ -1,8 +1,8 @@
-# I wanna to clean up my mess.
+# I wanna clean up my mess.
 
 = Introduction =
 
-Coding standard is important part of coding practice. It is something like common language for developers. If you ever tried to change some code with random naming of variables, wrong indentation and without doccomments, you know what I'm talking about.
+Coding standard is an important part of coding practice. It is something like a common language for developers. If you ever tried to edit some code with random naming of variables, wrong indentation and without doccomments, you know what I'm talking about.
 
 TODO: how to test for coding style violations.
 
@@ -32,12 +32,22 @@ class Test
 =TODO: everything else=
 
 == Documentation comments ==
+  * each file should contain a description of its purpose
+  * each file should contain @author, @package and @subpackage doccomments
+  * all functions should have a description of their purpose
+  * note important variables with the @var doccomment
+  * describe functions with @return, @param etc. doccoments as necessary
+  * it is better to include more information than less (but be reasonable)
 
 == Naming conventions ==
 
 === Files & directories ===
 === Namespaces ===
 === @package & @subpackage ===
+  * @package: Fajr
+  * @subpackage: Usually the path to the file, with __ instead of /. For example if a
+file belongs to `libfajr/base`, its subpackage should be `Libfajr__Base`.
+
 === Classes ===
 === Variables and functions ===
 === Constants ===
