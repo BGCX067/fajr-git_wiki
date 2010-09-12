@@ -18,4 +18,4 @@ All tools can be found in the "scripts" directory of trunk.
 
 *upload.py:* Before commiting, the code should be review by some authors. This tool is used to post review on [http://codereview.appspot.com rietveld review tool]. Basic usage is here: TODO, but you may prefer using gcl/gcl.py as it have more functionality.
 
-*gcl/gcl:* You may have more than one change in progress. GCL tool is borrowed from chromium project and enables you to manage more "changelists" in svn and also wraps the upload.py script. Basic usage is here: TODO.
+*gcl/gcl:* You may have more than one change in progress. GCL tool is borrowed from chromium project and enables you to manage more "changelists" in svn and also wraps the upload.py script. Basic usage is here: [GclPy].
