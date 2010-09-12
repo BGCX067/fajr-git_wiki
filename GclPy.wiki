@@ -12,10 +12,10 @@ your code. And finally, it allows you to commit the code.
 
 == gcl change ==
 == gcl change -c cl ==
-== gcl {status,st} [-c cl] ==
+== gcl {status,st} `[-c cl]` ==
 == gcl upload -c cl ==
 == gcl commit -c cl ==
-== gcl diff [-c cl] ==
+== gcl diff `[-c cl]` ==
 == gcl delete -c cl ==
 
 = Upcoming features =
