@@ -2,7 +2,7 @@
 
 = Introduction =
 
-Coding standard is an important part of coding practice. It is something like a common language for developers. If you ever tried to edit some code with random naming of variables, wrong indentation and without doccomments, you know what I'm talking about.
+Coding standard is an important part of coding practice. It is something like a common language for developers. If you have tried to edit some code with random naming of variables, wrong indentation and without doccomments, you know what I'm talking about.
 
 TODO: how to test for coding style violations.
 
@@ -10,7 +10,7 @@ TODO: how to test for coding style violations.
 
 == Formatting ==
 === Line length ===
-  * Each line of text should be at most *80 characters*. Exception to this rule is class string constant, which cannot be splitted and the namespace import statements.
+  * Each line of text should be at most *80 characters* long. An exception to this rule are class string constants, which cannot be split, and namespace import statements.
 === Encoding ===
   * Each file should be in *UTF-8* format. Exceptions to this rule are test data files which should contain the original encoding of the source.
 === Indentation ===
@@ -50,7 +50,7 @@ Example:
 }}}
 
 === Iterating over arrays ===
-  * Prefer *forach* statement instead of *for($i = 0; $i < 2; $i++)*
+  * Prefer *foreach* statement instead of *for($i = 0; $i < 2; $i++)*
 
 === Function calls and operators ===
   * Separate function arguments with exactly *one space*.
@@ -70,20 +70,20 @@ Example:
 
 == Documentation comments ==
 === File doc comments ===
-  * Each file should contain *license* notice at the top.
-  * Each file should also contain file doccomment, which contains *description, @package, @subpackage, @author and @filesource*
+  * Each file should contain a *license* notice at the top.
+  * Each file should also contain a file doccomment, which contains *description, @package, @subpackage, @author and @filesource*
   * arguments of @annotations should be aligned
   * @package: Fajr
-  * @subpackage: Path to the file, ommitting {src,tests} at the beginning. We replace directory separator "/" with double underscore "__" and start each token with uppercase character.
+  * @subpackage: Path to the file, ommitting {src,tests} at the beginning. We replace directory separator "/" with double underscore "`__`" and start each token with an uppercase character.
 
-Example: (for file src/libfajr/my_directory/MyClass.php)
+Example (for file src/libfajr/my_directory/MyClass.php):
 {{{
 // Copyright (c) 2010 The Fajr authors (see AUTHORS).
 // Use of this source code is governed by a MIT license that can be
 // found in the LICENSE file in the project root directory.
 
 /**
- * This file contains super-mega-cool spying component.
+ * This file contains the super-mega-cool spying component.
  *
  * @package    Fajr
  * @subpackage Libfajr__My_directory
@@ -93,10 +93,10 @@ Example: (for file src/libfajr/my_directory/MyClass.php)
 }}}
 
 === Class doc comments ===
-  * Each class should contain a description, @author, @package and @subpackage annotations. Optionally, it may contian long description with examples of use etc.
+  * Each class should contain a description, @author, @package and @subpackage annotations. Optionally, it may contain a long description with examples of use etc.
 
 === Member doc comments ===
-  * Each member of class shoud have contain *@var* annotation with it's type and purpose. You may use one-line doccomments.
+  * Each member of a class shoud contain a *@var* annotation with its type and purpose. You may use one-line doccomments.
 
 Example:
 {{{
@@ -105,25 +105,25 @@ Example:
 }}}
 
 === Function doc domments ===
-  * Each function should have doccomment with *description* of it's purpose, *@param* annotation for each parameter and *@returns* (Note: do not use @return) annotation for return type. Block of @params and @return should be delimited with empty line. TODO(align of @params).
+  * Each function should have a doccomment with the *description* of its purpose, *@param* annotation for each parameter and *@returns* (Note: do not use @return) annotation for the return type. Block of @params and @returns should be delimited with an empty line. TODO(align of @params).
 Example:
 {{{
   /**
-   * Very cool function making some magic stuff.
+   * A very cool function making some magic stuff.
    *
    * Optional long description
    * spanning several lines.
    * 
-   * @param double $ammount Ammount of magic we need
+   * @param double $amount Amount of magic we need
    * @param string $type    Type of magic to make
    *
    * @returns MyMagicClass magic created from ingredients
    */
-   public function createMagic($ammount, $type)
+   public function createMagic($amount, $type)
 }}}
 
 === Type hinting ===
-  * Doccomments are really good, but when you can, ensure that *parameters* are *strongly typed* (works only for arrays and classes). This helps especially when you forget to import class from other namespace.
+  * Doccomments are really good, but when you can, ensure that *parameters* are *strongly typed* (works only for arrays and classes). This helps especially when you forget to import a class from other namespace.
 
 Example:
 {{{
@@ -133,7 +133,7 @@ Example:
 == Naming conventions ==
 
 === Files & directories ===
-  * Source files should reside under /src, tesfiles under /tests.
+  * Source files should reside under /src, testfiles under /tests.
   * Test files should end with "Test.php".
   * Please keep both directory trees in sync.
   * Directories and files should contain only leters, numbers and underscores. Directories can contain only small letters.
@@ -148,15 +148,15 @@ tests/libfajr/my_directory/MyClassTest.php
 
 === Namespaces ===
   * Namespaces should start with "fajr" and copy the directory structure ommitting {src,tests}.
-  * "namespace" keyword must appear right after file doccomment.
-  * "use" keyword must apper right after namespace keyword and must be separated by one empty line.
-  * You must import ("use" keyword) all classes outside of this namespace which you intend to use. This also holds if you want the classname used only in doccomment (so phpdoc can pick up the information).
+  * "namespace" keyword must appear right after the file doccomment.
+  * the "use" keyword must apper right after the namespace keyword and must be separated by one empty line.
+  * You must import ("use" keyword) all classes outside of this namespace which you intend to use. This also holds if you want the classname to be used only in doccomment (so phpdoc can pick up the information).
   * Do not forget to input global classes like "Exception" if you use them.
   * when importing with "use", do not prepend namespace with "\"
   * order of imports must be sorted. Best way to do this in vim is ":!sort".
   * Import only classes, do not import namespaces (i.e. do not use "use path\to\directory" and then "$tmp = new directory\MyClass()".
 
-Example: (for file src/libfajr/my_directory/MyClass)
+Example (for file src/libfajr/my_directory/MyClass):
 {{{
 /**
  * file doccomment
