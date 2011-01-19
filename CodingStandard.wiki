@@ -70,20 +70,19 @@ Example:
 
 == Documentation comments ==
 === File doc comments ===
-  * Each file should contain a *license* notice at the top.
-  * Each file should also contain a file doccomment, which contains *description, @package, @subpackage, @author and @filesource*
+  * Each file should also contain a file doccomment, which contains *description and @copyright, @package, @subpackage, @author and @filesource annotations*
   * arguments of @annotations should be aligned
   * @package: Fajr
   * @subpackage: Path to the file, ommitting {src,tests} at the beginning. We replace directory separator "/" with double underscore "`__`" and start each token with an uppercase character.
 
 Example (for file src/libfajr/my_directory/MyClass.php):
 {{{
-// Copyright (c) 2010 The Fajr authors (see AUTHORS).
-// Use of this source code is governed by a MIT license that can be
-// found in the LICENSE file in the project root directory.
-
 /**
  * This file contains the super-mega-cool spying component.
+ *
+ * @copyright  Copyright (c) 2011 The Fajr authors (see AUTHORS).
+ *             Use of this source code is governed by a MIT license that can be
+ *             found in the LICENSE file in the project root directory.
  *
  * @package    Fajr
  * @subpackage Libfajr__My_directory
@@ -91,6 +90,9 @@ Example (for file src/libfajr/my_directory/MyClass.php):
  * @filesource
  */
 }}}
+
+Years in the above copyright statement should be written as comma separated list, i.e.
+Copyright (c) 2010, 2011 ...
 
 === Class doc comments ===
   * Each class should contain a description, @author, @package and @subpackage annotations. Optionally, it may contain a long description with examples of use etc.
